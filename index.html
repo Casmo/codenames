@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Codenames</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body, #game {
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            font-family: Arial;
+            overflow: hidden;
+            font-size:30px;
+            font-variant: small-caps;
+        }
+        #game {
+            position: absolute;
+            border: 10px solid red;
+        }
+        .word {
+            float: left;
+            position: relative;
+            width: 20%;
+            height: 20%;
+            background-color: #fff;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            border: 10px solid #000;
+        }
+        .word p {
+            -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            height: 30px;
+            line-height: 30px;
+            margin-top: -15px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            text-align: center;
+            vertical-align: bottom;
+        }
+        .blue {
+            color: rgba(0,0,0,.2);
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3273ff+0,516693+100 */
+            background: #3273ff; /* Old browsers */
+            background: -moz-radial-gradient(center, ellipse cover, #3273ff 0%, #516693 100%); /* FF3.6-15 */
+            background: -webkit-radial-gradient(center, ellipse cover, #3273ff 0%,#516693 100%); /* Chrome10-25,Safari5.1-6 */
+            background: radial-gradient(ellipse at center, #3273ff 0%,#516693 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3273ff', endColorstr='#516693',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        }
+        .red {
+            color: rgba(0,0,0,.2);
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d32a2a+0,aa5c5c+100 */
+            background: #d32a2a; /* Old browsers */
+            background: -moz-radial-gradient(center, ellipse cover, #d32a2a 0%, #aa5c5c 100%); /* FF3.6-15 */
+            background: -webkit-radial-gradient(center, ellipse cover, #d32a2a 0%,#aa5c5c 100%); /* Chrome10-25,Safari5.1-6 */
+            background: radial-gradient(ellipse at center, #d32a2a 0%,#aa5c5c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d32a2a', endColorstr='#aa5c5c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        }
+        .spy {
+            color: rgba(0,0,0,.2);
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#515151+0,1b1c1b+100 */
+            background: #515151; /* Old browsers */
+            background: -moz-radial-gradient(center, ellipse cover, #515151 0%, #1b1c1b 100%); /* FF3.6-15 */
+            background: -webkit-radial-gradient(center, ellipse cover, #515151 0%,#1b1c1b 100%); /* Chrome10-25,Safari5.1-6 */
+            background: radial-gradient(ellipse at center, #515151 0%,#1b1c1b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#515151', endColorstr='#1b1c1b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        }
+        .blank {
+            color: rgba(0,0,0,.2);
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#dce530+0,877700+100 */
+            background: #dce530; /* Old browsers */
+            background: -moz-radial-gradient(center, ellipse cover, #dce530 0%, #877700 100%); /* FF3.6-15 */
+            background: -webkit-radial-gradient(center, ellipse cover, #dce530 0%,#877700 100%); /* Chrome10-25,Safari5.1-6 */
+            background: radial-gradient(ellipse at center, #dce530 0%,#877700 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dce530', endColorstr='#877700',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        }
+    </style>
+    <script src="js/tools.js"></script>
+</head>
+<body>
+<div id="game"></div>
+<script src="js/game.js"></script>
+</body>
+</html>
